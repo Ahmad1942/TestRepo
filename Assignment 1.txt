@@ -1,0 +1,167 @@
+1...
+
+PROGRAM SUM:
+	Total = 0;
+	Read A;
+	Read B;
+	Total = A + B;
+	DO Print Total;
+END.
+
+
+2...
+
+PROGRAM EvenNumberPrinting:
+	A = 2;
+	While (A <= 100)
+		DO Print A;
+		A = A + 2;
+	End While; 
+END.
+
+
+3...
+
+PROGRAM LeapYearChecker:
+	Read Year;
+	if Year Mod 4 gives No Reminder;
+		if Year Mod 100 gives No Reminder;
+			if Year Mod 400 gives No Reminder;
+				DO Print It's Leap Year;
+			END if
+	Else;
+		DO Print It's Not a Leap Year;
+	End Else
+END.
+
+
+4...
+
+PROGRAM ConversionKmhToMph:
+	Read InputKilometers;
+	ConversionFactor = 0.621371;
+	MPH = InputKilometers * ConversionFactor;
+	DO Print MPH;
+END.
+
+
+5...
+
+PROGRAM BuzzChecker:
+	Read InputNumber;
+	if InputNumber Mod 7 gives No Reminder OR InputNumber Mod 10 Equals to 7;
+		DO Print Number is Buzz;
+		End if;
+	Else Print Number is Not Buzz;
+	END Else;
+END.
+
+
+6...
+
+PROGRAM TablePrinter:
+	Read UserNumber;
+	A = 1;
+	Multiplication = 0;
+	While(A <= 10) 
+		Multiplication = A * UserNumber
+		DO Print Multiplication;
+	END While;
+END.
+
+
+7... 
+
+PROGRAM FactorialOfNumber:
+	Read Number;
+	Result = 1;
+	if Number < 0;
+		DO Print Number is Invalid;
+		END if;
+	Else if Number = 0 Or Number = 1;
+		DO Print Result;
+		End Else if;
+	Else;
+		for loop i in Range 2 to Number;
+			Result = Result * i;
+			DO Print Result;
+	END Else;
+END.
+
+
+8... 
+
+PROGRAM PrimeNumberChecker:
+	Read Number;
+	A = Number / 2;
+	if Number <= 1;
+		DO Print Number is Not Prime;
+		END if;
+	for loop i in Range A to 2;
+		if Number Mod i = 0 ;
+			DO Print Number is Not Prime;
+			A = A - 1
+			END if;
+		Else;
+			Do Print Number is Prime;
+			END Else;
+	END for;
+END.
+
+
+9... 
+
+PROGRAM TypeOfTringleFinder:
+	Read A; (Side of Traingle)
+	Read B;
+	Read C;
+	if A = B AND B = C AND A = C;
+		DO Print Triangle is Equilateral Triangle;
+		End if;
+	Else if A is Not = B AND B is Not = C AND A is Not = C;
+		Do Print Triangle is Scalene Triangle;
+		End Else if;
+	Else 
+		Do Print Triangle is Isosceles Triangle;
+	END Else;
+END.
+
+
+10... 
+
+PROGRAM PatternPrinting:
+	(Using Multiple Print)
+	Do Print "*" Newline
+	Do Print "* *" Newline
+	Do Print "* * *" Newline
+	Do Print "* * * *" Newline
+	Do Print "* * * * *" Newline
+	
+	(Using Loop and Then Prints)
+	A = 1;
+	Result = null (Empty);
+	While (A <= 5)
+		Result = A Multiply *;
+		DO Print Result;
+		A = A + 1;
+	END While;
+END.
+
+
+11... 
+
+PROGRAM PalidromeChecker:
+	Read Number;
+	Convert Number to String
+	lastDigit = Number.Length
+	for loop FirstDigit to Range LastDigit;
+		if (Number[FirstDigit] = Number[LastDigit])
+			FirstDigit = FirstDigit + 1;
+			LastDigit = LastDigit - 1;
+			END if;
+		Else;
+			DO Print Number is Not Palidrome.
+			END Else;
+	END for;
+	DO Print Number is Palidrome;	
+END.
