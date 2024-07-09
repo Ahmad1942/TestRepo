@@ -24,11 +24,9 @@ END.
 
 PROGRAM LeapYearChecker:
 	Read Year;
-	if Year Mod 4 gives No Reminder;
-		if Year Mod 100 gives No Reminder;
-			if Year Mod 400 gives No Reminder;
-				DO Print It's Leap Year;
-			END if
+	if Year Mod 4 gives No Reminder AND Year Mod 100 gives No Reminder AND Year Mod 400 gives No Reminder;
+		DO Print It's Leap Year;
+		END if
 	Else;
 		DO Print It's Not a Leap Year;
 	End Else
@@ -82,7 +80,7 @@ PROGRAM FactorialOfNumber:
 		DO Print Result;
 		End Else if;
 	Else;
-		for loop i in Range 2 to Number;
+		for loop i in Range 1 to Number;
 			Result = Result * i;
 			DO Print Result;
 	END Else;
@@ -95,17 +93,20 @@ PROGRAM PrimeNumberChecker:
 	Read Number;
 	A = Number / 2;
 	if Number <= 1;
-		DO Print Number is Not Prime;
+		Return false;
 		END if;
-	for loop i in Range A to 2;
+	for loop i in Range 2 to A;
 		if Number Mod i = 0 ;
-			DO Print Number is Not Prime;
-			A = A - 1
-			END if;
-		Else;
-			Do Print Number is Prime;
-			END Else;
+			return false
+		return true;
+		END if;
 	END for;
+	if it returns true;
+		Do Print Number is Prime Number;
+		END if;
+	else;
+		DO Print is Not a Prime NUmber;
+
 END.
 
 
@@ -139,10 +140,13 @@ PROGRAM PatternPrinting:
 	
 	(Using Loop and Then Prints)
 	A = 1;
-	Result = null (Empty);
 	While (A <= 5)
-		Result = A Multiply *;
-		DO Print Result;
+		B = 1;
+		While (B <= A)
+			DO Print (*) in one line 
+			B++;
+		END While;
+		new Line
 		A = A + 1;
 	END While;
 END.
@@ -153,14 +157,18 @@ END.
 PROGRAM PalidromeChecker:
 	Read Number;
 	Convert Number to String
-	for loop FirstDigit to Range LastDigit;
-		if (Number[FirstDigit] = Number[LastDigit])
-			FirstDigit = FirstDigit + 1;
-			LastDigit = LastDigit - 1;
-			END if;
-		Else;
-			DO Print Number is Not Palidrome.
-			END Else;
-	END for;
+	leftside = 0;
+	rightside = Number length - 1;
+	While(leftside < rightside);
+		if (Number[leftside]  not = Number[rightside])
+			return false;
+		end if;
+		leftside = leftside + 1;
+		rightside = rightside - 1;
+	END While;
+	Return true;
+if true;
 	DO Print Number is Palidrome;	
+ELSE;
+	DO Print Number is NOT Palidrome;
 END.
